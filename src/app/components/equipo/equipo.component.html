@@ -1,0 +1,28 @@
+<!-- <p>equipo works!</p> -->
+
+<!-- Listado de integrantes del equipo de trabajo -->
+<h2>Equipo de Trabajo</h2>
+<ul class="integrantes"> 
+  <li *ngFor="let integrante of integrantes">
+    <a routerLink="/detalle/{{integrante.id}}">
+      <span class="badge">{{integrante.id}}
+      </span> {{integrante.nombre}}
+    </a>
+    <button type="button" class="delete" title="elimina integrante"
+      (click)="delete(integrante)">X</button>
+  </li>
+</ul>
+
+<!-- seccion para agregar un nuevo integrante -->
+<div>
+  <label for="nuevo-integrante">Nombre de Integrante: </label>
+  <input id="nuevo-integrante" #integranteNombre />
+  <!-- (click) le pasa el valor de la entrada a add() luego limpia el input -->
+  <button type="button" class="add-button" (click)="add(integranteNombre.value); integranteNombre.value=''">
+    Añadir Integrante
+  </button>
+</div>
+
+
+
+

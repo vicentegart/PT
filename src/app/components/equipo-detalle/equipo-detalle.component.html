@@ -1,0 +1,18 @@
+<!-- <p>equipo-detalle works!</p> -->
+
+<div *ngIf="integrante">
+
+    <h2>Detalles de {{integrante.nombre | uppercase}}</h2>
+    <div><span>id: </span>{{integrante.id}}</div>
+    <div>
+      <label for="integrante-nombre">Nombre de Integrante: </label>
+      <input id="integrante-nombre" [(ngModel)]="integrante.nombre" placeholder="nombre">
+    </div>
+    <div>
+        <label for="integrante-rol">Rol de Integrante: </label>
+        <input id="integrante-rol" [(ngModel)]="integrante.rol" placeholder="nombre">
+    </div>
+    <button type="button" (click)="goBack()">Atrás</button>
+    <button type="button" (click)="save()">Guardar</button>
+  
+  </div>

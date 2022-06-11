@@ -1,0 +1,13 @@
+<!-- <p>dashboard works!</p> -->
+
+
+<h2>Integrantes Principales</h2>
+<div class="integrantes-menu">
+  <a *ngFor="let integrante of integrantes" routerLink="/detail/{{integrante.id}}">
+    {{integrante.nombre}}
+  </a>
+</div>
+<h4>Tags de Prueba</h4>
+<div>
+  <app-ng-chips></app-ng-chips>
+</div>

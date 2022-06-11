@@ -1,0 +1,26 @@
+<!-- <p>ng-chips works!</p> -->
+
+<div style="margin: 30px;">
+    <div class="form-group">
+        <label>Angular tags simple input </label>
+        <tag-input [(ngModel)]='items' theme='bootstrap3-info'></tag-input>
+    </div>
+
+    <div class="form-group">
+        <label>Angular tags with keycode separator 32 (spacebar)</label>
+        <tag-input [ngModel]="itemsAsObjects" [displayBy]="'name'" theme='bootstrap'   
+             (onAdd)="onAdding($event)"
+            (onRemove)="onRemoving($event)" [separatorKeyCodes]="[32]">
+        </tag-input>
+    </div>
+
+    <div class="form-group">
+        <label>Angular tags API for TagInputDropdownComponent</label>
+        <tag-input [ngModel]="name" [onlyFromAutocomplete]="true">
+            <tag-input-dropdown 
+             [autocompleteObservable]="requestAutocompleteItems" displayBy="name" 
+             identifyBy="name">
+            </tag-input-dropdown>
+        </tag-input>
+    </div>
+</div>
